@@ -98,7 +98,7 @@ public class Exer4Test {
     @Test
     void deveCalcularImcQuandoAtletaEstaEmSobrepeso(){
         //Arrange
-        Atleta atleta = new Atleta("Vitor", 21, 1.75, 75.4);
+        Atleta atleta = new Atleta("Vitor", 21, 1.75, 78.4);
         //Act
         String resultado = atleta.calcularIMC(atleta.getAltura(), atleta.getPeso());
         //Assert

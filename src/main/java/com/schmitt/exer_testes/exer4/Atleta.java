@@ -41,5 +41,4 @@ public class Atleta {
         return "Obesidade Grau III (mórbida)";
     }
 
-    }
 }
