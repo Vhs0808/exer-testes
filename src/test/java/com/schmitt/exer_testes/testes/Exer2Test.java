@@ -54,11 +54,20 @@ public class Exer2Test {
     }
 
     @Test
-    void deveLançarExcessaoQuandoEstacaoInformadaErrada(){
+    void deveLançarExcessaoQuandoNumeroEstacaoMaiorQueLimite(){
         //Arrange
         int numEstacao = 5;
         //Act e Assert
         Assertions.assertThatThrownBy(() -> Estacoes.verificaEstacao(numEstacao))
-                .isInstanceOf(RuntimeException.class);
+                .isInstanceOf(RuntimeException.class).hasMessage("Valor deve estar entre 1 e 4");
+    }
+
+    @Test
+    void deveLançarExcessaoQuandoNumeroEstacaoMenorQueLimite(){
+        //Arrange
+        int numEstacao = 0;
+        //Act e Assert
+        Assertions.assertThatThrownBy(() -> Estacoes.verificaEstacao(numEstacao))
+                .isInstanceOf(RuntimeException.class).hasMessage("Valor deve estar entre 1 e 4");
     }
 }
