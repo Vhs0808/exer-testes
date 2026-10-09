@@ -105,4 +105,34 @@ public class Exer4Test {
         Assertions.assertThat(resultado).isEqualTo("Sobrepeso");
     }
 
+    @Test
+    void deveCalcularImcQuandoAtletaEstaEmObesidadeI(){
+        //Arrange
+        Atleta atleta = new Atleta("Vitor", 21, 1.75, 92.4);
+        //Act
+        String resultado = atleta.calcularIMC(atleta.getAltura(), atleta.getPeso());
+        //Assert
+        Assertions.assertThat(resultado).isEqualTo("Obesidade Grau I");
+    }
+
+    @Test
+    void deveCalcularImcQuandoAtletaEstaEmObesidadeII(){
+        //Arrange
+        Atleta atleta = new Atleta("Vitor", 21, 1.75, 111.7);
+        //Act
+        String resultado = atleta.calcularIMC(atleta.getAltura(), atleta.getPeso());
+        //Assert
+        Assertions.assertThat(resultado).isEqualTo("Obesidade Grau II (severa)");
+    }
+
+    @Test
+    void deveCalcularImcQuandoAtletaEstaEmObesidadeIII(){
+        //Arrange
+        Atleta atleta = new Atleta("Vitor", 21, 1.75, 129.7);
+        //Act
+        String resultado = atleta.calcularIMC(atleta.getAltura(), atleta.getPeso());
+        //Assert
+        Assertions.assertThat(resultado).isEqualTo("Obesidade Grau III (mórbida)");
+    }
+
 }
