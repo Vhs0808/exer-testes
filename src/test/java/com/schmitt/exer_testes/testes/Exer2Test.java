@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class Exer2Test {
     @Test
-    void deveVerificarEstacaoDoAnoQuandoInformada(){
+    void deveVerificarEstacaoDoAnoVerao(){
         //Arrange
         int numEstacao = 1;
         //Act
@@ -18,7 +18,43 @@ public class Exer2Test {
     }
 
     @Test
-    void deveLançarExcessaoQuandoEstacaoinformadaErrada(){
+    void deveVerificarEstacaoDoAnoOutono(){
+        //Arrange
+        int numEstacao = 2;
+        //Act
+        String mensagem = Estacoes.verificaEstacao(numEstacao);
+        //Assert
+        Assertions.assertThat(mensagem).isEqualTo(
+                "É outono - e as folhas caem"
+        );
+    }
+
+    @Test
+    void deveVerificarEstacaoDoAnoInverno(){
+        //Arrange
+        int numEstacao = 3;
+        //Act
+        String mensagem = Estacoes.verificaEstacao(numEstacao);
+        //Assert
+        Assertions.assertThat(mensagem).isEqualTo(
+                "É inverno - e o tempo está frio"
+        );
+    }
+
+    @Test
+    void deveVerificarEstacaoDoAnoPrimavera(){
+        //Arrange
+        int numEstacao = 4;
+        //Act
+        String mensagem = Estacoes.verificaEstacao(numEstacao);
+        //Assert
+        Assertions.assertThat(mensagem).isEqualTo(
+                "É primavera - e as flores desabrocham"
+        );
+    }
+
+    @Test
+    void deveLançarExcessaoQuandoEstacaoInformadaErrada(){
         //Arrange
         int numEstacao = 5;
         //Act e Assert
