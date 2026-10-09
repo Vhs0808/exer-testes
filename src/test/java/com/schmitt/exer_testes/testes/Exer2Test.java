@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class Exer2Test {
     @Test
-    void deveVerificarEstacaoDoAnoVerao(){
+    void deveVerificarEstacaoDoAnoVeraoQuandoNumero1(){
         //Arrange
         int numEstacao = 1;
         //Act
@@ -18,7 +18,7 @@ public class Exer2Test {
     }
 
     @Test
-    void deveVerificarEstacaoDoAnoOutono(){
+    void deveVerificarEstacaoDoAnoOutonoQuandoNumero2(){
         //Arrange
         int numEstacao = 2;
         //Act
@@ -30,7 +30,7 @@ public class Exer2Test {
     }
 
     @Test
-    void deveVerificarEstacaoDoAnoInverno(){
+    void deveVerificarEstacaoDoAnoInvernoQuandoNumero3(){
         //Arrange
         int numEstacao = 3;
         //Act
@@ -42,7 +42,7 @@ public class Exer2Test {
     }
 
     @Test
-    void deveVerificarEstacaoDoAnoPrimavera(){
+    void deveVerificarEstacaoDoAnoPrimaveraQuandoNumero4(){
         //Arrange
         int numEstacao = 4;
         //Act
